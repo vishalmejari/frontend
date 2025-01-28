@@ -9,7 +9,7 @@ const User = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "https://backend-6-bhyd.onrender.com/api/getall"
+        "https://backend-3-r4ws.onrender.com/api/getall"
       );
       setUsers(response.data);
     };
@@ -18,7 +18,7 @@ const User = () => {
 
   const deleteUser = async (userId) => {
     await axios
-      .delete(`https://backend-6-bhyd.onrender.com/api/delete/${userId}`)
+      .delete(`https://backend-3-r4ws.onrender.com/api/delete/${userId}`)
       .then((response) => {
         setUsers((prevUser) => prevUser.filter((user) => user._id !== userId));
       })

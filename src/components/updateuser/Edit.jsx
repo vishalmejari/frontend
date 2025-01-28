@@ -17,7 +17,7 @@ const users={
         setUser({...user,[name]:value});        
     }
     useEffect(()=>{
-        axios.get(`https://backend-6-bhyd.onrender.com/api/getone/${id}`)
+        axios.get(`https://backend-3-r4ws.onrender.com/api/getone/${id}`)
         .then((response)=>{
             setUser(response.data)
         }).catch((error)=>{
@@ -26,7 +26,7 @@ const users={
     },[id])
     const submitForm=async(e)=>{
         e.preventDefault();
-        await axios.put(`https://backend-6-bhyd.onrender.com/api/update/${id}`,user)
+        await axios.put(`https://backend-3-r4ws.onrender.com/api/update/${id}`,user)
         .then((response)=>{
             toast.success(response.data.msg,{position:"top-right"})
             navigate("/")
